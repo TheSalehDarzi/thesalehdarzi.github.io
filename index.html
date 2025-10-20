@@ -101,6 +101,41 @@
         .biography-section .links a:hover {
             text-decoration: underline;
         }
+        @media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section h2 {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .section .content {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .biography-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .biography-section img {
+        margin-right: 0;
+        margin-bottom: 15px;
+        height: 120px;
+    }
+}
+    html {
+    scroll-behavior: smooth;
+}
     </style>
 </head>
 <body>
@@ -125,9 +160,9 @@
             <img src="SAL2.jpg" alt="Saleh Darzi" style="transform: scale(1.2);">
             <div>
                 <h2>Biography</h2>
-                <p>Saleh Darzi is a Ph.D. Candidate in Computer Science and Engineering Department, actively engaged
+                <p>Saleh Darzi is a Ph.D. Candidate in the Bellini College of Artificial Intelligence, Cybersecurity, and Computing, actively engaged
                     in research within the Applied Cryptography Research Laboratory (ACRL) under the supervision of  <a href="https://cse.usf.edu/~attilaayavuz/" style="color: #CFC493;"> Dr. Attila Yavuz </a> at the University of South Florida. His primary research pursuits revolve around post-quantum
-                    and applied cryptography, with a focus on addressing challenges in the privacy and security of IoT, Blockchain technology, and network security. Saleh holds a Master of Science degree in Electrical Engineering (Communication-System) from K. N. Toosi University of Technology, Tehran, Iran, obtained in 2021.</p>
+                    and applied cryptography, with a focus on addressing challenges in the privacy and security of IoT, Blockchain technology, and network security. Saleh holds a Master of Science degree in Electrical Engineering (Communication-System) from K. N. Toosi University of Technology, Tehran, Iran, obtained in 2021. He is a member of IEEE and ACM.</p>
                 <p> <b> Email: </b> <a href="salehdarzi@usf.edu" style="color: #CFC493;">salehdarzi@usf.edu</a></p>
                 <p> <b> Office:</b> IDR 400, Interdisciplinary Research Building, University of South Florida</p>
                 <div class="links">
@@ -143,7 +178,7 @@
         <section id="research" class="section">
             <h2>Interests</h2>
             <div class="content">
-                <p> <b> <span style="color: green;">&#10004;</span> Post-Quantum Cryptography, <span style="color: green;">&#10004;</span> Applied Cryptography, <span style="color: green;">&#10004;</span>Security, <span style="color: green;">&#10004;</span> Privacy, <span style="color: green;">&#10004;</span> Blockchains </b> </p>
+                <p> <b> <span style="color: green;">&#10004;</span> Post-Quantum Cryptography, <span style="color: green;">&#10004;</span> Applied Cryptography, <span style="color: green;">&#10004;</span>Network Security, <span style="color: green;">&#10004;</span> Privacy, <span style="color: green;">&#10004;</span> Next-Generation Networks, <span style="color: green;">&#10004;</span> Blockchains </b> </p>
             </div>
         </section>
 
@@ -206,6 +241,19 @@
                     
                     <div class="pubWrap">
                         <div class="pubTitle2">
+                            [C] <b>Privacy-Preserving and Post-Quantum Counter Denial of Service Framework for Wireless Networks </b>
+                        </div>
+                      <div class="pubAuthor">  <u><b> Saleh Darzi </b></u> and <u> Attila A. Yavuz </u> </div>
+                        <div class="pubVenue"> MILCOM 2024-2024 IEEE Military Communications Conference (MILCOM) </div>
+                        <div class="pubLink">
+                                <span class="outerPubUrl">
+                                        <a href="PACDoSQ.pdf" class="PubUrl">PDF</a>
+                                    </span>
+                        </div>
+                    </div>
+
+                    <div class="pubWrap">
+                        <div class="pubTitle2">
                             [C] <b>Counter Denial of Service for Next-Generation Networks within the Artificial Intelligence and Post-Quantum Era </b>
                         </div>
                       <div class="pubAuthor">  <u><b> Saleh Darzi </b></u> and <u> Attila A. Yavuz </u> </div>
@@ -217,18 +265,6 @@
                         </div>
                     </div>
 
-                    <div class="pubWrap">
-                        <div class="pubTitle2">
-                            [M] <b> Post-Quantum Security for Trustworthy Artificial Intelligence: An Emerging Frontier</b>
-                        </div>
-                      <div class="pubAuthor">  <u><b> Saleh Darzi </b></u>, <u> Attila A. Yavuz</u> , <u> Rouzbeh Behnia</u></div>
-                        <div class="pubVenue"> Authorea Preprints 2023 </div>
-                        <div class="pubLink">
-                                <span class="outerPubUrl">
-                                        <a href="PQCMeetsML.pdf" class="PubUrl">PDF</a>
-                                    </span>
-                        </div>
-                    </div>
 
                     <div class="pubWrap">
                         <div class="pubTitle2">
@@ -243,6 +279,34 @@
                         </div>
                     </div>
 
+                     <div class="pubWrap">
+                        <div class="pubTitle2">
+                            [C] <b>Beyond Basic Trust: Envisioning the Future of NextGen Networked Systems and Digital Signatures </b>
+                        </div>
+                      <div class="pubAuthor">  <u> Attila A. Yavuz </u>, <u>Kiarash Sedghighadikolaei </u>, <u><b> Saleh Darzi </b></u>, <u> Saif E. Nouma </u> </div>
+                        <div class="pubVenue"> 2023 5th IEEE International Conference on Trust, Privacy and Security in Intelligent Systems and Applications (TPS-ISA)</div>
+                        <div class="pubLink">
+                                <span class="outerPubUrl">
+                                        <a href="NextGNetSignatureYavuzSep2023Approved.pdf" class="PubUrl">PDF</a>
+                                    </span>
+                        </div>
+                    </div>
+
+
+                    <div class="pubWrap">
+                        <div class="pubTitle2">
+                            [M] <b> Post-Quantum Security for Trustworthy Artificial Intelligence: An Emerging Frontier</b>
+                        </div>
+                      <div class="pubAuthor">  <u><b> Saleh Darzi </b></u>, <u> Attila A. Yavuz</u> , <u> Rouzbeh Behnia</u></div>
+                        <div class="pubVenue"> Authorea Preprints 2023 </div>
+                        <div class="pubLink">
+                                <span class="outerPubUrl">
+                                        <a href="PQCMeetsML.pdf" class="PubUrl">PDF</a>
+                                    </span>
+                        </div>
+                    </div>
+
+
                     <div class="pubWrap">
                         <div class="pubTitle2">
                             [S] <b> Envisioning the future of cyber security in post-quantum era: A survey on pq standardization, applications, challenges and opportunities</b>
@@ -256,18 +320,6 @@
                         </div>
                     </div>
 
-                    <div class="pubWrap">
-                        <div class="pubTitle2">
-                            [C] <b>Beyond Basic Trust: Envisioning the Future of NextGen Networked Systems and Digital Signatures </b>
-                        </div>
-                      <div class="pubAuthor">  <u> Attila A. Yavuz </u>, <u>Kiarash Sedghighadikolaei </u>, <u><b> Saleh Darzi </b></u>, <u> Saif E. Nouma </u> </div>
-                        <div class="pubVenue"> 2023 5th IEEE International Conference on Trust, Privacy and Security in Intelligent Systems and Applications (TPS-ISA)</div>
-                        <div class="pubLink">
-                                <span class="outerPubUrl">
-                                        <a href="NextGNetSignatureYavuzSep2023Approved.pdf" class="PubUrl">PDF</a>
-                                    </span>
-                        </div>
-                    </div>
 
                     <div class="pubWrap">
                         <div class="pubTitle2">
@@ -300,16 +352,28 @@
         </section>
 
         <section id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="content">
-                <ul>
-                    <li> <b> &bull; &nbsp; System Administration and Technical Support</b> in Department of Computer Science and Engineering since Summer 2023 </li>
-                    <li><p> <a> &bull; &nbsp;  An <b>Investigator </b> in sponsored project by <b>US National Science Foundation</b> named "Project Title: CAREER: Lightweight and Fast Authentication for Internet of Things" 2022-2023</a>  </p></li>
-                    <li><p> <b> &bull; &nbsp;  Research Assistant</b> <a> in Department of Computer Science and Engineering with the supervision of professor Attila A. Yavuz, Since Fall 2022 </a>  </p></li>
-                    <li><p> <b> &bull; &nbsp;  Internship</b> <a> at Noor Tab Tavan Co. under supervision of Dr. Nima Raiesi 2017</a>  </p></li>
-                </ul>
-            </div>
-        </section>
+    <h2>Experience</h2>
+    <div class="content">
+        <ul>
+            <li><b>&bull; &nbsp; Graduate Research Associate</b> at the <b>University of South Florida</b> (2024–Present)<br>
+                Contributing to NSF-funded international collaborations and leading post-quantum secure authentication, privacy, and spectrum access frameworks for next-generation wireless and satellite–terrestrial systems.
+            </li>
+            <li><b>&bull; &nbsp; Graduate Research Assistant</b> at the <b>University of South Florida</b> (2021–2024)<br>
+                Focused on the design of post-quantum cryptographic protocols, 5G authentication mechanisms, and privacy-preserving network frameworks, resulting in multiple IEEE publications and U.S. patent filings.
+            </li>
+            <li><b>&bull; &nbsp; System Administrator and Technical Support</b> in the <b>Department of Computer Science and Engineering</b> (2023–2025)<br>
+                Managed departmental compute infrastructure, cluster automation, and enterprise security compliance with a focus on CIS-level hardening and Ansible-driven system orchestration.
+            </li>
+            <li><b>&bull; &nbsp; Graduate Research and Teaching Assistant</b> at <b>K. N. Toosi University of Technology</b> (2019–2021)<br>
+                Conducted research on privacy-preserving smart grid communications and tutored graduate-level courses in Cryptography, Network Security, and Information Theory.
+            </li>
+            <li><b>&bull; &nbsp; Research Internships and Specialized Training</b> (2017–2020)<br>
+                Participated in advanced academic training programs on <b>Blockchain</b>, <b>Post-Quantum Cryptography</b>, and <b>Applied Cryptography</b> at <b>Sharif University of Technology</b> and <b>Shahid Beheshti University</b>.
+            </li>
+        </ul>
+    </div>
+</section>
+
 
         <section id="teaching" class="section">
             <h2>Teaching</h2>
@@ -328,8 +392,9 @@
             <h2>Service</h2>
             <div class="content">
                 <p> &bull; &nbsp; Publication Chair for the ACM CCS Workshop on Quantum-Resistant Cryptography and Security (ACM QRSEC 2025), as part of the organizing committee of ACM CCS. </p>
-                <p> &bull; &nbsp; Reviewer of ACM Computing Surveys Journal </p>
                 <p> &bull; &nbsp; Reviewer of IEEE Transactions on Dependable and Secure Computing Journal </p>
+                <p> &bull; &nbsp; Reviewer of IEEE Transactions on Information Forensics and Security </p>
+                <p> &bull; &nbsp; Reviewer of ACM Computing Surveys Journal </p>
                 <p> &bull; &nbsp; Reviewer of IEEE Transactions on Smart Grid Journal </p>
                 <p> &bull; &nbsp; Reviewer of Annual Computer Security Applications Conference (ACSAC) </p>
                 <p> &bull; &nbsp; Reviewer of IEEE IoT Journal </p>
@@ -338,6 +403,7 @@
                 <p> &bull; &nbsp; Reviewer of Concurrency and Computation: Practice and Experience </p>
                 <p> &bull; &nbsp; Reviewer of International Conference on Electrical, Computer and Energy Technologies (ICECET) </p>
                 <p> &bull; &nbsp; Graduate Student Member of IEEE </p>
+                <p> &bull; &nbsp; Graduate Student Member of ACM </p>
                 <p> &bull; &nbsp; Member of IEEE Communications Society Membership </p>
                 <p> &bull; &nbsp; Member of IEEE Young Professionals </p>
                 <p> &bull; &nbsp; Member of Iranian Society of Cryptology </p>
