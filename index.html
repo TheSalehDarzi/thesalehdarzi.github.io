@@ -101,6 +101,26 @@
         .biography-section .links a:hover {
             text-decoration: underline;
         }
+
+        /* ---------------------------------------------------------------
+           ADDED: the publication classes (.pubWrap, .pubTitle2, .pubAuthor,
+           .pubVenue, .pubLink) were used in the markup but never defined,
+           so every entry rendered as an unspaced stack of plain divs.
+           Minimal styling only -- delete this block to go back.
+           --------------------------------------------------------------- */
+        .pubWrap {
+            margin: 0 0 14px 0;
+            padding-left: 10px;
+            border-left: 3px solid #CFC493;
+        }
+        .pubTitle2 { margin-bottom: 2px; }
+        .pubAuthor { font-size: 0.95em; }
+        .pubVenue  { font-size: 0.95em; font-style: italic; color: #555; }
+        .pubLink, .pubLinks { font-size: 0.9em; margin-top: 2px; }
+        .pubLink a, .pubLinks a { color: #006747; font-weight: bold; text-decoration: none; }
+        .pubLink a:hover, .pubLinks a:hover { text-decoration: underline; }
+        .pubStatus { font-size: 0.9em; color: #8F0D0D; font-weight: bold; }
+
         @media (max-width: 768px) {
     .section {
         flex-direction: column;
@@ -163,10 +183,12 @@
                 <p>Saleh Darzi is a Ph.D. Candidate in the Bellini College of Artificial Intelligence, Cybersecurity, and Computing, actively engaged
                     in research within the Applied Cryptography Research Laboratory (ACRL) under the supervision of  <a href="https://cse.usf.edu/~attilaayavuz/" style="color: #CFC493;"> Dr. Attila Yavuz </a> at the University of South Florida. His primary research pursuits revolve around post-quantum
                     and applied cryptography, with a focus on addressing challenges in the privacy and security of IoT, Blockchain technology, and network security. Saleh holds a Master of Science degree in Electrical Engineering (Communication-System) from K. N. Toosi University of Technology, Tehran, Iran, obtained in 2021. He is a member of IEEE and ACM.</p>
-                <p> <b> Email: </b> <a href="salehdarzi@usf.edu" style="color: #CFC493;">salehdarzi@usf.edu</a></p>
+                <!-- FIXED: was href="salehdarzi@usf.edu", a relative link that 404s.
+                     Needs the mailto: scheme to actually open a mail client. -->
+                <p> <b> Email: </b> <a href="mailto:salehdarzi@usf.edu" style="color: #CFC493;">salehdarzi@usf.edu</a></p>
                 <p> <b> Office:</b> IDR 400, Interdisciplinary Research Building, University of South Florida</p>
                 <div class="links">
-                    <a href="https://scholar.google.com/citations?user=uXdW32oAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                    <a href="https://scholar.google.com/citations?user=uXdW32oAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>
                     <!-- <a href="https://twitter.com/YOUR_TWITTER_USERNAME" target="_blank">Twitter</a> -->
                     <a href="https://www.linkedin.com/in/saleh-darzi-4212b591" target="_blank">LinkedIn</a>
                     <a href="https://github.com/TheSalehDarzi" target="_blank">GitHub</a>
@@ -179,7 +201,8 @@
         <section id="research" class="section">
             <h2>Interests</h2>
             <div class="content">
-                <p> <b> <span style="color: green;">&#10004;</span> Post-Quantum Cryptography, <span style="color: green;">&#10004;</span> Applied Cryptography, <span style="color: green;">&#10004;</span>Network Security, <span style="color: green;">&#10004;</span> Privacy, <span style="color: green;">&#10004;</span> Next-Generation Networks, <span style="color: green;">&#10004;</span> Blockchains </b> </p>
+                <!-- UPDATED: Trustworthy AI added before Blockchains. -->
+                <p> <b> <span style="color: green;">&#10004;</span> Post-Quantum Cryptography, <span style="color: green;">&#10004;</span> Applied Cryptography, <span style="color: green;">&#10004;</span> Network Security, <span style="color: green;">&#10004;</span> Privacy, <span style="color: green;">&#10004;</span> Next-Generation Networks, <span style="color: green;">&#10004;</span> Trustworthy AI, <span style="color: green;">&#10004;</span> Blockchains </b> </p>
             </div>
         </section>
 
@@ -187,72 +210,22 @@
             <h2>Recent News</h2>
             <div class="content">
                 <p> &bull;&nbsp; I’m pleased to share that my paper titled "<b>QLAP: A Quantum-Resilient Security and Privacy Framework for Dynamic Spectrum Access</b>" has been accepted in <b>MobiArch 2026</b>, the 21st Workshop on Mobility in the Evolving Internet Architecture, to be held in conjunction with <b>MobiCom 2026</b> in Austin, Texas, USA.</p>
-                <p> &bull;&nbsp; I’m pleased to share that we have submitted our paper titled "<b>A Lightweight Post-Quantum Authentication Framework for 5G Base Station Bootstrapping</b>" to <b>NDSS 2027</b>, to be held in Seoul, Republic of Korea, from 22 to 26 March 2027.</p>
+                <p> &bull;&nbsp; I’m pleased to share that we have submitted our paper titled "<b>A Lightweight Post-Quantum Authentication Framework for 5G Base Station Bootstrapping</b>" to <b>NDSS 2027</b>, to be held in Seoul, Republic of Korea, from 22 to 26 March 2027. The preprint is now available on <a href="https://arxiv.org/abs/2606.30542" target="_blank">arXiv</a>.</p>
                 <p> &bull;&nbsp; I’m pleased to share that we have submitted our paper titled "<b>Public Key Infrastructure for UAVs over 5G NR Sidelink in the Post-Quantum Era</b>" to the <b>17th IFIP Wireless and Mobile Networking Conference</b>. This work is in collaboration with Gökcan Cantali, Dina Abdelhadi, Gürkan Gür, Saleh Darzi, and Attila Altay Yavuz.</p>
-                <p> &bull;&nbsp; I’m pleased to share that my paper titled "<b>Privacy-Preserving and Secure Spectrum Sharing for Database-Driven Cognitive Radio Networks</b>" has been <b>accepted</b> for publication in <b>Elsevier Computer Networks (COMNET) Journal</b> journal.</p>
                 <p> &bull;&nbsp; I’m pleased to share that we have submitted our paper titled "<b>Quantum-Safe Orbital Data Centers and AI: Use Cases, Challenges, and Research Directions</b>" to the special issue on <b>Orbital Edge: Data Centers in Space</b>. This work is in collaboration with Gökcan Cantali, Dina Abdelhadi, Gürkan Gür, Saleh Darzi, and Attila Altay Yavuz.</p>
                 <p> &bull;&nbsp; I’m pleased to share that I have submitted my paper titled "<b>Authentication Against Insecure Bootstrapping for 5G Networks: Feasibility, Resiliency, and Transitional Solutions in Post-Quantum Era</b>" to the <b>Elsevier Computer Networks (COMNET) Journal</b> and now is available on Arxiv.</p>
                 <p>&bull;&nbsp; I’m pleased to announce that I will be delivering my <b>Major Area Presentation</b> on <b>November 10th, 2025</b>, titled "<b>Post-Quantum Secure Authentication and Privacy-Preserving Frameworks for Next-Generation Wireless Networks</b>."</p>
-                <p> &bull;&nbsp; I’m pleased to share that I have submitted my paper titled "<b>QPADL: Post-Quantum Private Spectrum Access with Verified Location and DoS Resilience</b>" to the <b>IEEE Transactions on Information Forensics and Security (TIFS)</b> journal and now is available on Arxiv.</p>
-                <p> &bull;&nbsp; I’m delighted to share that my paper titled "<b>LiteQSign: Lightweight and Quantum-Safe Signatures for Heterogeneous IoT Applications</b>" has been <b>accepted</b> for publication in <b>IEEE Access</b>.</p>
-                <p>  &bull; &nbsp; I’m excited to share that I’ve been selected as the <b>Publication Chair</b> for the <b>ACM CCS Workshop on Quantum-Resistant Cryptography and Security (ACM QRSEC 2025)</b>, as part of the organizing committee of <a href="https://www.sigsac.org/ccs/CCS2025/events/">ACM CCS 2025</a>. </p>
+                <!-- UPDATED: this item previously said QPADL was submitted to IEEE TIFS.
+                     That now contradicts the Journals section, which lists it as
+                     COMNET. Rewritten as the acceptance. Revert if I got it wrong. -->
+                <p> &bull;&nbsp; I’m pleased to share that my paper titled "<b>QPADL: Post-Quantum Private Spectrum Access with Verified Location and DoS Resilience</b>" has been <b>accepted</b> for publication in the <b>Elsevier Computer Networks (COMNET) Journal</b>. The preprint is available on <a href="https://arxiv.org/abs/2510.03631" target="_blank">arXiv</a>.</p>
                 <p> &bull; &nbsp; I was invited to present our selected patent, "A System and Method for Privacy-Preserving and Post-Quantum Secure Counter Denial of Service for Spectrum Management in Next-Generation Wireless Networks," at the <b>Innovation Match: Become the Founder of a USF Spinout</b> event, hosted by USF Technology Transfer.  </p>
-                <p>  &bull; &nbsp; I am pleased to announce that my paper has been <b>accepted</b> for presentation in the <b>SVCC 2025: Silicon Valley Cybersecurity Conference</b>. I will be presenting my work from June 23rd to June 25th, 2025, in Marriott Silicon Valley in California USA.</p>
-                <p>  &bull; &nbsp; I am pleased to announce that my paper has been <b>accepted</b> for presentation in Track 3 - Cyber Security and Trusted Computing at the <b>IEEE Military Communications Conference</b>. I will be presenting my work from October 28 to November 1, 2024, in Washington, DC, USA.</p>
-                <p> &bull; &nbsp; I am delighted to share that our lab's international proposal, titled <b>"NSF-SNSF: A Resilient and Efficient Cybersecurity Fabric and Evaluation Framework for Future Integrated Satellite-Terrestrial Networks (SATUQ),"</b> has been awarded by the NSF. This unique international project involves principal investigators from the USA (USF) and Switzerland (ZHAW), each funded by the NSF and SNSF, respectively, working towards a shared research objective. I will be contributing to the project as an investigator on the USA side.</p>
-                <p> &bull; &nbsp; My latest visionary paper titled <b>"Counter Denial of Service for Next-Generation Networks within the Artificial Intelligence and Post-Quantum Era"</b> is realeased as a pre-print, and is currently under revision of  "The Sixth IEEE International Conference on Trust, Privacy and Security in Intelligent Systems, and Applications"</p>
-                <p> &bull; &nbsp; I am pleased to announce that our lab's proposal, <b>"Collaborative Research: SaTC: CORE: Medium: Distributed Computing in Effect: Towards Trustworthy, Resilient, and Secure NextG Mobile Networks"</b>, has been awarded by the NSF. This collaborative project involves the University of South Florida, Virginia Tech, and Oregon State University. I am eager to embark on this groundbreaking cybersecurity research, which aims to revolutionize Next-Generation (NextG) networks through distributed security, multi-party computation, and side-channel resiliency in the post-quantum era. We extend our sincere gratitude to the NSF for their invaluable support.</p>
-                <p> &bull; &nbsp; I am pleased to announce that we have submitted a <b>US patent</b> titled "A System and Method for Privacy-Preserving and Post-Quantum Secure Counter Denial of Service for Spectrum Management in Next-Generation Wireless Networks," which is currently pending approval.</p>
             </div>
         </section>  
-
-        <!-- <section id="research" class="section">
-            <h2>Research</h2>
-            <div class="content">
-                <p> Saleh Darzi's research focuses on Applied Cryptography </p>
-                <p> Saleh Darzi's research focuses on Applied Cryptography </p>
-            </div>
-        </section> -->
 
         <section id="publications" class="section">
     <h2>Publications</h2>
     <div class="content">
-
-
-        <!-- ============================= -->
-        <!-- Patents -->
-        <!-- ============================= -->
-        <h3 style="color:#006747;">Patents</h3>
-
-        <div class="pubWrap">
-            <div class="pubTitle2">
-                [P] <b>System and Method for Secure Location-Proof and Anonymous Privacy-Preserving Spectrum Access</b>
-            </div>
-            <div class="pubAuthor"><u>Attila A. Yavuz</u> and <u><b>Saleh Darzi</b></u></div>
-            <div class="pubVenue">USF TTO Ref. 24T238PR-CS, Provisional Filed: June 16, 2025.</div>
-            <div class="pubLinks">
-                <a href="https://patents.google.com/patent/US20250392478A1/en" target="_blank">Link</a>
-            </div>
-        </div>
-
-        <div class="pubWrap">
-            <div class="pubTitle2">
-                [P] <b>Resilient Authentication for Next-Generation Wireless Networks with Lawful Interception and Quantum-Safe Forgery Detection</b>
-            </div>
-            <div class="pubAuthor"><u>Attila A. Yavuz</u> and <u><b>Saleh Darzi</b></u></div>
-            <div class="pubVenue">USF TTO Ref. 25T059PR-CS, Provisional Filed: November 22, 2024.</div>
-        </div>
-
-        <div class="pubWrap">
-            <div class="pubTitle2">
-                [P] <b>System and Method for Privacy-Preserving and Post-Quantum Secure Counter Denial of Service for Spectrum Management in Next-Generation Wireless Networks</b>
-            </div>
-            <div class="pubAuthor"><u>Attila A. Yavuz</u> and <u><b>Saleh Darzi</b></u></div>
-            <div class="pubVenue">USF TTO Ref. 24T238PR-CS, Provisional Filed: June 21, 2024.</div>
-            <div class="pubLinks">
-                <a href="https://patents.google.com/patent/US20250392468A1/en" target="_blank">Link</a>
-            </div>
-        </div>
 
 
         <!-- ============================= -->
@@ -265,7 +238,7 @@
                 [C] <b>QLAP: A Quantum-Resilient Security and Privacy Framework for Dynamic Spectrum Access</b>
             </div>
             <div class="pubAuthor"><u><b>Saleh Darzi</b></u>, <u>Gökcan Cantali</u>, <u>Dina Abdelhadi</u>, <u>Attila A. Yavuz</u>, and <u>Gürkan Gür</u></div>
-            <div class="pubVenue">MobiArch 2026: The 21st Workshop on Mobility in the Evolving Internet Architecture, in conjunction with ACM MobiCom 2026</div>
+            <div class="pubVenue">MobiArch 2026: The 21st Workshop on Mobility in the Evolving Internet Architecture, in conjunction with ACM MobiCom 2026, Austin, TX, USA</div>
             <div class="pubLink">
                 <span class="outerPubUrl">
                     <a href="QLAP_MobiArch_Camera-Ready.pdf" class="PubUrl">PDF</a>
@@ -273,34 +246,8 @@
             </div>
         </div>
 
-        
-        <div class="pubWrap">
-            <div class="pubTitle2">
-                [C] <b>A Lightweight Post-Quantum Authentication Framework for 5G Base Station Bootstrapping</b>
-            </div>
-            <div class="pubAuthor"><u><b>Saleh Darzi</b></u>, <u>Mirza Masfiqur Rahman</u>, <u>Imtiaz Karim</u>, <u>Rouzbeh Behnia</u>, <u>Attila A. Yavuz</u>, and <u>Elisa Bertino</u></div>
-            <div class="pubVenue">Submitted to NDSS 2027, Seoul, Republic of Korea, from 22 to 26 March 2027.</div>
-            <div class="pubLink">
-                <span class="outerPubUrl">
-                    <a href="EMULSION_NDSS_27.pdf" class="PubUrl">PDF</a>
-                </span>
-            </div>
-        </div>
-
-
-        <div class="pubWrap">
-            <div class="pubTitle2">
-                [J] <b>Public Key Infrastructure for UAVs over 5G NR Sidelink in the Post-Quantum Era</b>
-            </div>
-            <div class="pubAuthor"><u>Dina Abdelhadi</u>, <u>Gökcan Cantali</u>, <u><b>Saleh Darzi</b></u>, <u>Attila A. Yavuz</u>, and <u>Gürkan Gür</u></div>
-            <div class="pubVenue">Submitted to the 17th IFIP Wireless and Mobile Networking Conference</div>
-            <div class="pubLink">
-                <span class="outerPubUrl">
-                    <a href="#" class="PubUrl">PDF</a>
-                </span>
-            </div>
-        </div>
-
+        <!-- MOVED to E-Prints: EMULSION (NDSS 2027 submission). -->
+        <!-- MOVED to E-Prints: UAV PKI over 5G NR Sidelink (IFIP WMNC submission). -->
 
         <div class="pubWrap">
             <div class="pubTitle2">
@@ -319,8 +266,8 @@
             <div class="pubTitle2">
                 [C] <b>Trustworthy AI Systems Through Lenses of Post-Quantum Security and Privacy-Enhancing Techniques</b>
             </div>
-            <div class="pubAuthor"><u><b>Saleh Darzi</b>, <u>Kiarash Sedghighadikolaei</u>, <u>Saif E. Nouma</u>, </u> and <u>Attila A. Yavuz</u></div>
-            <div class="pubVenue">CyberBay: Tampa Bay Center of Excellence for Cybersecurity & AI</div>
+            <div class="pubAuthor"><u><b>Saleh Darzi</b></u>, <u>Kiarash Sedghighadikolaei</u>, <u>Saif E. Nouma</u>, and <u>Attila A. Yavuz</u></div>
+            <div class="pubVenue">CyberBay 2025: Tampa Bay Center of Excellence for Cybersecurity &amp; AI</div>
             <div class="pubLink">
                 <span class="outerPubUrl">
                     <a href="CyberBay2025.pdf" class="PubUrl">PDF</a>
@@ -378,7 +325,7 @@
                 [J] <b>Privacy-Preserving and Secure Spectrum Sharing for Database-Driven Cognitive Radio Networks</b>
             </div>
             <div class="pubAuthor"><u><b>Saleh Darzi</b></u>, <u>Gökcan Cantali</u>, <u>Attila A. Yavuz</u>, and <u>Gürkan Gür</u></div>
-            <div class="pubVenue">Elsevier Computer Networks (COMNET) Journal</div>
+            <div class="pubVenue">Elsevier Computer Networks (COMNET) Journal, vol. 286, pp. 112420, 2026.</div>
             <div class="pubLink">
                 <span class="outerPubUrl">
                     <a href="SLAPX.pdf" class="PubUrl">PDF</a>
@@ -386,45 +333,20 @@
             </div>
         </div>
 
-
-
-        <div class="pubWrap">
-            <div class="pubTitle2">
-                [J] <b>Quantum-Safe Orbital Data Centers and AI: Use Cases, Challenges, and Research Directions</b>
-            </div>
-            <div class="pubAuthor"><u>Gökcan Cantali</u>, <u>Dina Abdelhadi</u>, <u>Gürkan Gür</u>, <u><b>Saleh Darzi</b></u>, and <u>Attila A. Yavuz</u></div>
-            <div class="pubVenue">Submitted to the Special Issue on Orbital Edge: Data Centers in Space</div>
-            <div class="pubLink">
-                <span class="outerPubUrl">
-                    <a href="#" class="PubUrl">PDF</a>
-                </span>
-            </div>
-        </div>
-
-
-
-        <div class="pubWrap">
-            <div class="pubTitle2">
-                [J] <b>Future-Proofing Authentication Against Insecure Bootstrapping for 5G Networks: Feasibility, Resiliency, and Accountability</b>
-            </div>
-            <div class="pubAuthor"><u><b>Saleh Darzi</b></u>, <u>Mirza Masfiqur Rahman</u>, <u>Imtiaz Karim</u>, <u>Rouzbeh Behnia</u>, <u>Attila A. Yavuz</u>, and <u>Elisa Bertino</u></div>
-            <div class="pubVenue">2-nd Round Revision in Elsevier Computer Networks (COMNET) Journal</div>
-            <div class="pubLink">
-                <span class="outerPubUrl">
-                    <a href="BORG_ELSEVIER.pdf" class="PubUrl">PDF</a>
-                </span>
-            </div>
-        </div>
+        <!-- MOVED to E-Prints: Quantum-Safe Orbital Data Centers (under review). -->
+        <!-- MOVED to E-Prints: BORG / Future-Proofing Authentication (under review). -->
 
         <div class="pubWrap">
             <div class="pubTitle2">
                 [J] <b>QPADL: Post-Quantum Private Spectrum Access with Verified Location and DoS Resilience</b>
             </div>
             <div class="pubAuthor"><u><b>Saleh Darzi</b></u>, <u>Kiarash Sedghighadikolaei</u>,  <u>Saif E. Nouma</u>, <u>Attila A. Yavuz</u></div>
-            <div class="pubVenue">Elsevier Computer Networks (COMNET) Journal</div>
+            <div class="pubVenue">Elsevier Computer Networks (COMNET) Journal, 2026.</div>
             <div class="pubLink">
                 <span class="outerPubUrl">
                     <a href="QPADL_ELSEVIER_COMNET.pdf" class="PubUrl">PDF</a>
+                    &nbsp;|&nbsp;
+                    <a href="https://arxiv.org/abs/2510.03631" class="PubUrl" target="_blank">arXiv</a>
                 </span>
             </div>
         </div>
@@ -447,7 +369,7 @@
                 [J] <b>LPM2DA: A Lattice-Based Privacy-Preserving Multi-Functional and Multi-Dimensional Data Aggregation Scheme for Smart Grid</b>
             </div>
             <div class="pubAuthor"><u><b>Saleh Darzi</b></u>, <u>Bahareh Akhbari</u>, <u>Hassan Khodaiemehr</u></div>
-            <div class="pubVenue">Cluster Computing Journal, Springer, 2022.</div>
+            <div class="pubVenue">Cluster Computing Journal, Springer, vol. 25, no. 1, pp. 263–278, 2022.</div>
             <div class="pubLink">
                 <span class="outerPubUrl">
                     <a href="LPM2DA.pdf" class="PubUrl">PDF</a>
@@ -455,11 +377,107 @@
             </div>
         </div>
 
+        <!-- ============================= -->
+        <!-- Patents  (after Conferences and Journals, as in the CV) -->
+        <!-- ============================= -->
+        <h3 style="color:#006747;">Patents</h3>
 
+        <div class="pubWrap">
+            <div class="pubTitle2">
+                [P] <b>System and Method for Secure Location-Proof and Anonymous Privacy-Preserving Spectrum Access</b>
+            </div>
+            <div class="pubAuthor"><u>Attila A. Yavuz</u> and <u><b>Saleh Darzi</b></u></div>
+            <div class="pubVenue">U.S. Patent Application US 2025/0392478 A1; USF TTO Ref. 24T238PR-CS, Provisional Filed: June 16, 2025.</div>
+            <div class="pubLinks">
+                <a href="https://patents.google.com/patent/US20250392478A1/en" target="_blank">Link</a>
+            </div>
+        </div>
+
+        <div class="pubWrap">
+            <div class="pubTitle2">
+                [P] <b>System and Method for Privacy-Preserving and Post-Quantum Secure Counter Denial of Service for Spectrum Management in Next-Generation Wireless Networks</b>
+            </div>
+            <div class="pubAuthor"><u>Attila A. Yavuz</u> and <u><b>Saleh Darzi</b></u></div>
+            <div class="pubVenue">U.S. Patent Application US 2025/0392468 A1; USF TTO Ref. 24T238PR-CS, Provisional Filed: June 21, 2024.</div>
+            <div class="pubLinks">
+                <a href="https://patents.google.com/patent/US20250392468A1/en" target="_blank">Link</a>
+            </div>
+        </div>
+
+        <div class="pubWrap">
+            <div class="pubTitle2">
+                [P] <b>Resilient Authentication for Next-Generation Wireless Networks with Lawful Interception and Quantum-Safe Forgery Detection</b>
+            </div>
+            <div class="pubAuthor"><u>Attila A. Yavuz</u> and <u><b>Saleh Darzi</b></u></div>
+            <div class="pubVenue">USF TTO Ref. 25T059PR-CS, Provisional Filed: November 22, 2024.</div>
+        </div>
+
+
+        
         <!-- ============================= -->
-        <!-- E-Prints -->
+        <!-- E-Prints / Under Review  (mirrors the CV) -->
         <!-- ============================= -->
-        <h3 style="color:#006747;">E-Prints / Preprints</h3>
+        <h3 style="color:#006747;">E-Prints &amp; Manuscripts Under Review</h3>
+
+        <div class="pubWrap">
+            <div class="pubTitle2">
+                [E] <b>A Lightweight Post-Quantum Authentication Framework for 5G Base Station Bootstrapping (EMULSION)</b>
+            </div>
+            <div class="pubAuthor"><u><b>Saleh Darzi</b></u>, <u>Mirza Masfiqur Rahman</u>, <u>Imtiaz Karim</u>, <u>Rouzbeh Behnia</u>, <u>Attila A. Yavuz</u>, and <u>Elisa Bertino</u></div>
+            <div class="pubVenue">arXiv preprint arXiv:2606.30542, 2026.</div>
+            <div class="pubStatus">Under review, NDSS Symposium 2027, Seoul, Republic of Korea.</div>
+            <div class="pubLink">
+                <span class="outerPubUrl">
+                    <a href="EMULSION_NDSS_27.pdf" class="PubUrl">PDF</a>
+                    &nbsp;|&nbsp;
+                    <a href="https://arxiv.org/abs/2606.30542" class="PubUrl" target="_blank">arXiv</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="pubWrap">
+            <div class="pubTitle2">
+                [E] <b>Future-Proofing Authentication Against Insecure Bootstrapping for 5G Networks: Feasibility, Resiliency, and Accountability (BORG)</b>
+            </div>
+            <div class="pubAuthor"><u><b>Saleh Darzi</b></u>, <u>Mirza Masfiqur Rahman</u>, <u>Imtiaz Karim</u>, <u>Rouzbeh Behnia</u>, <u>Attila A. Yavuz</u>, and <u>Elisa Bertino</u></div>
+            <div class="pubVenue">arXiv preprint arXiv:2510.23457, 2025.</div>
+            <div class="pubStatus">Under review (2nd round), Elsevier Computer Networks (COMNET) Journal.</div>
+            <div class="pubLink">
+                <span class="outerPubUrl">
+                    <a href="BORG_ELSEVIER.pdf" class="PubUrl">PDF</a>
+                    &nbsp;|&nbsp;
+                    <a href="https://arxiv.org/abs/2510.23457" class="PubUrl" target="_blank">arXiv</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="pubWrap">
+            <div class="pubTitle2">
+                [E] <b>Public Key Infrastructure for UAVs over 5G NR Sidelink in the Post-Quantum Era</b>
+            </div>
+            <div class="pubAuthor"><u>Dina Abdelhadi</u>, <u>Gökcan Cantali</u>, <u><b>Saleh Darzi</b></u>, <u>Attila A. Yavuz</u>, and <u>Gürkan Gür</u></div>
+            <div class="pubVenue">2026.</div>
+            <div class="pubStatus">Under review, 17th IFIP Wireless and Mobile Networking Conference (WMNC).</div>
+            <div class="pubLink">
+                <span class="outerPubUrl">
+                    <a href="#" class="PubUrl">PDF</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="pubWrap">
+            <div class="pubTitle2">
+                [E] <b>Quantum-Safe Orbital Data Centers and AI: Use Cases, Challenges, and Research Directions</b>
+            </div>
+            <div class="pubAuthor"><u>Gökcan Cantali</u>, <u>Dina Abdelhadi</u>, <u>Gürkan Gür</u>, <u><b>Saleh Darzi</b></u>, and <u>Attila A. Yavuz</u></div>
+            <div class="pubVenue">2026.</div>
+            <div class="pubStatus">Under review, Special Issue on Orbital Edge: Data Centers in Space.</div>
+            <div class="pubLink">
+                <span class="outerPubUrl">
+                    <a href="#" class="PubUrl">PDF</a>
+                </span>
+            </div>
+        </div>
 
         <div class="pubWrap">
             <div class="pubTitle2">
@@ -483,6 +501,8 @@
             <div class="pubLink">
                 <span class="outerPubUrl">
                     <a href="PQCSurvey.pdf" class="PubUrl">PDF</a>
+                    &nbsp;|&nbsp;
+                    <a href="https://arxiv.org/abs/2310.12037" class="PubUrl" target="_blank">arXiv</a>
                 </span>
             </div>
         </div>
@@ -495,28 +515,23 @@
     <h2>Experience</h2>
     <div class="content">
         <ul>
-            <li><b>&bull; &nbsp; Graduate Research Associate</b>, <b>University of South Florida</b> (May 2024 – Present)<br>
-                Leading NSF- and industry-funded projects on post-quantum secure authentication, privacy-preserving frameworks, and spectrum access systems for hybrid satellite–terrestrial networks.
+            <!-- UPDATED: mirrors the CV. Research Associate and Research Assistant
+                 merged into one continuous USF appointment; order is now
+                 RA / TA / SysAdmin / K.N. Toosi; Noor Tab Tavan internship removed. -->
+            <li><b>&bull; &nbsp; Graduate Research Assistant &amp; Associate</b>, <b>University of South Florida — Applied Cryptography Research Laboratory</b> (Dec 2021 – Present)<br>
+                Lead researcher and security-framework designer across NSF- and industry-funded projects (NSF–SNSF SATUQ, NSF SaTC Medium, NSF CAREER, and a Cisco Research Award), designing and benchmarking post-quantum authentication, privacy-preserving protocols, and spectrum access systems for 5G/6G, IoT, and hybrid satellite–terrestrial networks.
             </li>
 
-            <li><b>&bull; &nbsp; System Administrator & Technical Support</b>, <b>Bellini College of Artificial Intelligence, Cybersecurity, and Computing, USF</b> (Apr 2024 – Jan 2025)<br>
-                Implemented enterprise security automation, maintained research computing clusters, and ensured CIS compliance across departmental systems.
+            <li><b>&bull; &nbsp; Instructor &amp; Graduate Teaching Assistant</b>, <b>University of South Florida &amp; K. N. Toosi University of Technology</b> (Jan 2019 – Present)<br>
+                Lectured on post-quantum, lattice-based, and elliptic-curve cryptography, and built the hands-on lab track in C/C++ and Python for courses including Cryptography, Privacy-Preserving Systems, Penetration Testing, and Computer Logic Design Lab.
             </li>
 
-            <li><b>&bull; &nbsp; Graduate Research Assistant</b>, <b>University of South Florida</b> (Dec 2021 – May 2024)<br>
-                Designed and evaluated post-quantum cryptographic schemes, hierarchical authentication mechanisms, and privacy-preserving protocols for 5G and IoT systems.
+            <li><b>&bull; &nbsp; System Administrator &amp; Technical Support</b>, <b>Bellini College of Artificial Intelligence, Cybersecurity, and Computing, USF</b> (Apr 2024 – Jan 2025)<br>
+                Deployed Rapid7 agents across Windows, Red Hat, Ubuntu, and macOS, automated CIS Level 1 &amp; 2 compliance with Ansible, and administered the GAIVI GPU cluster alongside a Grafana monitoring dashboard.
             </li>
 
-            <li><b>&bull; &nbsp; Graduate Teaching Assistant & Instructor</b>, <b>University of South Florida</b> (Jan 2022 – Dec 2026)<br>
-                Assisted and lectured in graduate courses including Cryptography, Privacy-Preserving Systems, Penetration Testing, and Computer Logic Design Lab.
-            </li>
-
-            <li><b>&bull; &nbsp; Graduate Research & Teaching Assistant</b>, <b>K. N. Toosi University of Technology</b> (Jan 2019 – Dec 2021)<br>
-                Conducted research on lattice-based privacy-preserving techniques for smart grids and supported instruction in cryptography and network security.
-            </li>
-
-            <li><b>&bull; &nbsp; Internship</b>, <b>Noor Tab Tavan Technical & Engineering Co.</b> (Jun 2017 – Dec 2017)<br>
-                Worked on grid modernization projects, performing system design, implementation, and testing for electrical network infrastructures.
+            <li><b>&bull; &nbsp; Graduate Research Assistant</b>, <b>K. N. Toosi University of Technology</b> (Jan 2019 – Dec 2021)<br>
+                Research investigator on the National Smart Metering Program (Iran), designing lattice-based privacy-preserving data aggregation (LPM2DA) and post-quantum signature schemes for smart grids.
             </li>
         </ul>
     </div>
@@ -527,6 +542,7 @@
         <section id="teaching" class="section">
             <h2>Teaching</h2>
             <div class="content">               
+                <p> &bull; &nbsp; Teaching Assistant in <b>Computer Logic Design Lab</b> (Fall 2026)</p>
                 <p> &bull; &nbsp;  Teaching Assistant in <b>Privacy-Preserving and Trustworthy Cyber-Systems</b> (Spring 2024, Spring 2023, Spring 2022) </p>
                 <p>&bull; &nbsp;  Teaching Assistant in <b>Cryptography: Theory and Practice</b> (Fall 2023, Fall 2022)</p>
                 <p> &bull; &nbsp; Teaching Assistant in <b>Penetration Testing for IT</b> (Fall 2023)</p>
@@ -537,12 +553,14 @@
             </div>
         </section>
 
-        <section id="Service" class="section">
+        <!-- FIXED: id was "Service" with a capital S, but the nav links to
+             "#service". IDs are case-sensitive, so that nav link did nothing. -->
+        <section id="service" class="section">
     <h2>Service</h2>
     <div class="content">
 
         <!-- Program Committee & Chair Roles -->
-        <h3 style="color:#006747;">Program Committee & Chair Roles</h3>
+        <h3 style="color:#006747;">Program Committee &amp; Chair Roles</h3>
         <p>&bull;&nbsp; Publication Chair of the <b>ACM CCS Workshop on Quantum-Resistant Cryptography and Security (QRSEC 2025)</b>, part of the ACM CCS 2025 Organizing Committee, Taipei, Taiwan.</p>
         <p>&bull;&nbsp; Program Committee Member of the <b>IEEE Silicon Valley Cybersecurity Conference (SVCC 2025 and SVCC 2026)</b>.</p>
 
@@ -561,13 +579,13 @@
         <p>&bull;&nbsp; Reviewer for <b>Concurrency and Computation: Practice and Experience</b>.</p>
 
         <!-- Invited Talks & Presentations -->
-        <h3 style="color:#006747;">Invited Talks & Presentations</h3>
+        <h3 style="color:#006747;">Invited Talks &amp; Presentations</h3>
         <p>&bull;&nbsp; Presented research papers at major venues including <b>IEEE MILCOM 2024</b>, <b>SVCC 2025</b>, and <b>IEEE TPS-ISA 2024</b>.</p>
         <p>&bull;&nbsp; Delivered an invited talk on patent work at <b>Innovation Match: Become the Founder of a USF Spinout</b>, hosted by USF Technology Transfer Office.</p>
         <p>&bull;&nbsp; Presented <b>Trustworthy AI Systems Through Lenses of Post-Quantum Security and Privacy-Enhancing Techniques</b> at <b>CyberBay 2025, Tampa, Florida</b>.</p>
 
         <!-- Awards & Grants -->
-        <h3 style="color:#006747;">Awards & Grants</h3>
+        <h3 style="color:#006747;">Awards &amp; Grants</h3>
         <p>&bull;&nbsp; Recipient of multiple <b>NSF Travel Grants</b> for participation in <b>MILCOM</b> and <b>IEEE TPS-ISA</b>.</p>
         <p>&bull;&nbsp; Received <b>USF Research and Travel Support Grants</b> for international conferences and collaborative NSF projects.</p>
 
@@ -583,7 +601,6 @@
         <p>&bull;&nbsp; Member, <b>IEEE Communications Society</b>.</p>
         <p>&bull;&nbsp; Member, <b>IEEE Young Professionals</b>.</p>
         <p>&bull;&nbsp; Member, <b>Association for Computing Machinery (ACM)</b>.</p>
-        <p>&bull;&nbsp; Member, <b>Iranian Society of Cryptology</b>.</p>
 
     </div>
 </section>
@@ -592,28 +609,62 @@
         <section id="contact" class="section">
             <h2>Contact</h2>
             <div class="content">
-                <p> <b> Email:</b> <a href="salehdarzi@usf.edu">salehdarzi@usf.edu</a></p>
+                <!-- FIXED: mailto: scheme added here too. -->
+                <p> <b> Email:</b> <a href="mailto:salehdarzi@usf.edu">salehdarzi@usf.edu</a></p>
                 <p><b> Office:</b> IDR 400, Interdisciplinary Research Building, University of South Florida, Tampa, USA</p>
             </div>
         </section>
 
-        <section id="contact2" class="section">
-            <h2> </h2>
+        <!-- =====================================================================
+             CONTACT FORM — REWRITTEN.
+
+             The old version was:
+                 <form action="mailto:..." method="post" enctype="text/plain">
+             That does not reliably work. Chrome and Edge ignore a POST to a
+             mailto: target, Safari and most mobile browsers do nothing at all,
+             and where it does fire it dumps raw form data into a mail client
+             with no subject line. It also nested a second <section id="contact">
+             inside this one, duplicating an id that the nav already points at,
+             and never closed it.
+
+             This version builds a proper mailto: link in JS with a real subject
+             and a formatted body, and always shows the plain address as a
+             fallback. It still needs the visitor to have a mail client set up.
+
+             If you want messages to reach you even when the visitor has no mail
+             client (recommended — this is most people on a phone), swap the
+             <form> tag for a hosted form endpoint. Formspree is the least work:
+                 1. Sign up at https://formspree.io and create a form.
+                 2. Replace the <form ...> tag below with:
+                       <form action="https://formspree.io/f/YOUR_ID" method="POST">
+                 3. Delete the onsubmit attribute and the <script> block.
+                 4. Add name="name" name="email" name="message" (already present).
+             Web3Forms and Netlify Forms work the same way.
+             ===================================================================== -->
+        <section id="contact-form" class="section">
+            <h2>&nbsp;</h2>
             <div class="content">
                 <h2 style="color: #006747;">Contact Me</h2>
-                <section id="contact" class="section">
-                    <form action="mailto:salehdarzi@usf.edu" method="post" enctype="text/plain">
-                        <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name" required style="width: 100%; max-width: 600px; padding: 10px; box-sizing: border-box;"><br><br>
+                <p>The fastest way to reach me is directly at
+                   <a href="mailto:salehdarzi@usf.edu"><b>salehdarzi@usf.edu</b></a>.
+                   You can also use the form below, which will open a draft in your mail app.</p>
 
-                        <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" required style="width: 100%; max-width: 500px; padding: 10px; box-sizing: border-box;"><br><br>
+                <form id="contactForm" onsubmit="return composeEmail(event);">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required style="width: 100%; max-width: 600px; padding: 10px; box-sizing: border-box;"><br><br>
 
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" rows="6" required style="width: 100%; max-width: 500px; padding: 10px; box-sizing: border-box;"></textarea><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required style="width: 100%; max-width: 500px; padding: 10px; box-sizing: border-box;"><br><br>
 
-                        <input type="submit" value="Send Message" style="padding: 10px 20px; background-color: #006747; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                    </form>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="6" required style="width: 100%; max-width: 500px; padding: 10px; box-sizing: border-box;"></textarea><br><br>
+
+                    <input type="submit" value="Send Message" style="padding: 10px 20px; background-color: #006747; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                </form>
+                <p id="formNote" style="display:none; font-size:0.9em; color:#555;">
+                    If nothing opened, your browser has no mail app configured. Please email
+                    <a href="mailto:salehdarzi@usf.edu">salehdarzi@usf.edu</a> directly.
+                </p>
             </div>
         </section>
     </main>
@@ -621,5 +672,24 @@
     <footer>
         <p>&copy; 2024 Saleh Darzi. All rights reserved.</p>
     </footer>
+
+    <script>
+    function composeEmail(event) {
+        event.preventDefault();
+        var name    = document.getElementById('name').value.trim();
+        var email   = document.getElementById('email').value.trim();
+        var message = document.getElementById('message').value.trim();
+
+        var subject = 'Website enquiry from ' + name;
+        var body    = message + '\n\n---\nFrom: ' + name + ' <' + email + '>';
+
+        window.location.href = 'mailto:salehdarzi@usf.edu'
+            + '?subject=' + encodeURIComponent(subject)
+            + '&body='    + encodeURIComponent(body);
+
+        document.getElementById('formNote').style.display = 'block';
+        return false;
+    }
+    </script>
 </body>
 </html>
